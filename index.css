@@ -1,21 +1,33 @@
+* {
+    box-sizing: border-box;
+}
+
 @font-face {
     font-family: 'Bigelow Rules';
     src: url(/fonts/BigelowRules-Regular.ttf) format('truetype');
 }
 
+@font-face {
+    font-family: 'Patrick Hand';
+    src: url(/fonts/PatrickHand-Regular.ttf) format('truetype');
+}
+
 body {
-    margin: 1%;
+    margin: 1em;
+    font-family: 'Patrick Hand';
 }
 
 
 .famousbanner {
     font-size: 70pt;
     text-align: center;
-    color: rgb(159, 117, 20);
-    background-color: beige;
+    color: rgb(126, 92, 14);
+    background-image: url('/images/banner.jpeg');
+    background-size: 105%;
     font-family: 'Bigelow Rules';
-    margin-top: 0px;
-    margin-bottom: 10px;
+    padding: 0.3em;
+    margin-top: 0;
+    margin-bottom: 0.2em;
 }
 
 nav {
@@ -23,24 +35,41 @@ nav {
     justify-content: space-evenly;
     align-items: center;
     background-color: antiquewhite;
-    margin-top: 10px;
+    margin-top: 0.5em;
+    padding: 0.5em;
     height: auto;
+    font-family: 'Patrick Hand';
+    font-size: 1.2em;
 }
 
 h1 {
-    font-size: 45pt;
+    font-size: 4em;
     text-align: center;
-    color: burlywood;
-    font-family: arial;
+    color: rgb(114, 82, 9);
+    background-color:rgb(222, 221, 218);
+    font-family: 'Bigelow Rules';
+    padding: 0.3em;
+    margin-bottom: 0.3em;
 }
 
 h2 {
-    font-size: 30pt;
-    text-align: left;
+    font-size: 50pt;
+    font-family: 'Bigelow Rules';
+    text-align: center;
     color: cadetblue;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
-.caregrid {
+h3 {
+    font-family: 'Bigelow Rules';
+    font-size: 3rem;
+    margin: 0.1em;
+    color: rgb(114, 82, 9)
+}
+
+.peoplegrid {
     background:rgb(222, 221, 218);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -49,4 +78,39 @@ h2 {
     align-content: center;
     margin-bottom: 2em;
     padding: 1.5em;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: bottom;
+    justify-items: center;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+.factfile {
+    font-size: 1.2em;
+    background-color:rgb(255, 249, 230);
+    padding: 0.5em;
+    width: 100%;
+}
+
+@media (max-width: 850px) {
+
+    .container {
+        display: grid;
+        background-color:rgb(222, 221, 218);
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        align-items: bottom;
+        justify-items: center;
+        margin: 1rem;
+    }
 }
